@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int num, i;
+    unsigned long int factorial = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    // Handling negative numbers
+    if (num < 0) {
+        printf("Factorial of a negative number doesn't exist.");
+    }
+    else {
+        // Calculating factorial
+        for (i = 1; i <= num; ++i) {
+            factorial *= i;
+        }
+        printf("Factorial of %d = %lu", num, factorial);
+    }
+
+    return 0;
+}
